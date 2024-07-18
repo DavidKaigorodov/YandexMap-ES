@@ -65,7 +65,7 @@ const start = async () => {
 start();
 ```
 
-2. *Файл для обработки `db.js` подключения к БД:*
+2. *Файл для обработки `db.js` подключения к Базе данных PostgreSQL:*
 
 ```javascript
 const {Sequelize} = require('sequelize')
@@ -216,7 +216,7 @@ router.post('/upload', upload.single('file'), async (req, res) => {
 module.exports = router;
 ```
 
-10. *Файл для обработки и загрузки в БД ЭЗС `AddButtonAZS.js`:*
+10. *Файл для обработки и загрузки ЭЗС в Базу данных PostgreSQL `AddButtonAZS.js`:*
 
 ```javascript
 const { Client } = require('pg');
@@ -314,7 +314,7 @@ router.post('/upload2', upload.single('file'), async (req, res) => {
 module.exports = router;
 ```
 
-12. *Файл для обработки и загрузки в БД для Зон по приоритетности застройки `AddButtonZONE.js`:*
+12. *Файл для обработки и загрузки Зон по приоритетности застройки в Базу данных PostgreSQL `AddButtonZONE.js`:*
 
 ```javascript
 const { Client } = require('pg');
