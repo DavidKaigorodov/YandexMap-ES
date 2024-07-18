@@ -314,7 +314,7 @@ router.post('/upload2', upload.single('file'), async (req, res) => {
 module.exports = router;
 ```
 
-12.* Файл для обработки и загрузки в БД для Зон по приоритетности застройки `AddButtonZONE.js`:*
+12.*Файл для обработки и загрузки в БД для Зон по приоритетности застройки `AddButtonZONE.js`:*
 
 ```javascript
 const { Client } = require('pg');
