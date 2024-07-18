@@ -65,7 +65,7 @@ const start = async () => {
 start();
 ```
 
-2.*Файл для обработки `db.js` подключения к БД:*
+2. *Файл для обработки `db.js` подключения к БД:*
 
 ```javascript
 const {Sequelize} = require('sequelize')
@@ -82,7 +82,7 @@ module.exports = new Sequelize(
 )
 ```
 
-3.*Для создания БД использовался метод Code First описанныйц в файле `module.js`:*
+3. *Для создания БД использовался метод Code First описанныйц в файле `module.js`:*
 
 ```javascript
 const sequelize = require('../db')
@@ -112,7 +112,7 @@ module.exports = {
 }
 ```
 
-4.*Файл, который представляет собой контроллер, обрабатывает запросы для работы с ЭЗС в приложении `StationController.js`:*
+4. *Файл, который представляет собой контроллер, обрабатывает запросы для работы с ЭЗС в приложении `StationController.js`:*
 
 ```javascript
     const {Station} = require('../models/models.js');
@@ -132,7 +132,7 @@ class StationController {
 module.exports = new StationController();
 ```
 
-5.*Файл, который представляет собой контроллер, обрабатывает запросы для работы с Зонами по приоритетности застройки в приложении `przonesController.js`:*
+5. *Файл, который представляет собой контроллер, обрабатывает запросы для работы с Зонами по приоритетности застройки в приложении `przonesController.js`:*
 
 ```javascript
 const {Zone} = require('../models/models.js');
@@ -152,7 +152,7 @@ class przonesController {
 module.exports = new przonesController();
 ```
 
-6.*Файл-маршрутизатор для работы с объектами ЭЗС `StationRouter.js`:*
+6. *Файл-маршрутизатор для работы с объектами ЭЗС `StationRouter.js`:*
 
 ```javascript
 const Router = require('express')
@@ -165,7 +165,7 @@ router.get('/Station', StationController.getAll)
 module.exports = router
 ```
 
-7.*Файл-маршрутизатор для работы с объектами Зон по приоритетности застройки `przonesRouter.js`:*
+7. *Файл-маршрутизатор для работы с объектами Зон по приоритетности застройки `przonesRouter.js`:*
 
 ```javascript
 const Router = require('express')
@@ -179,7 +179,7 @@ router.get('/Zone', przonesController.getAll)
 module.exports = router
 ```
 
-8.*Файл для создания маршрута связанного с загрузкой файла в БД ЭЗС через csv-документ использовался этот файл `FileUploadRouter.js`:*
+8. *Файл для создания маршрута связанного с загрузкой файла в БД ЭЗС через csv-документ использовался этот файл `FileUploadRouter.js`:*
 
 ```javascript
 const Router = require('express');
@@ -216,7 +216,7 @@ router.post('/upload', upload.single('file'), async (req, res) => {
 module.exports = router;
 ```
 
-10.*Файл для обработки и загрузки в БД ЭЗС `AddButtonAZS.js`:*
+10. *Файл для обработки и загрузки в БД ЭЗС `AddButtonAZS.js`:*
 
 ```javascript
 const { Client } = require('pg');
@@ -277,7 +277,7 @@ module.exports = {
 };
 ```
 
-11.*Файл для создания маршрута связанного с загрузкой файла в БД Зон по приоритетности застройки через csv-документ  использовался этот файл `FileUploadRouterZONE.js`:*
+11. *Файл для создания маршрута связанного с загрузкой файла в БД Зон по приоритетности застройки через csv-документ  использовался этот файл `FileUploadRouterZONE.js`:*
 
 ```javascript
 const Router = require('express');
@@ -314,7 +314,7 @@ router.post('/upload2', upload.single('file'), async (req, res) => {
 module.exports = router;
 ```
 
-12.*Файл для обработки и загрузки в БД для Зон по приоритетности застройки `AddButtonZONE.js`:*
+12. *Файл для обработки и загрузки в БД для Зон по приоритетности застройки `AddButtonZONE.js`:*
 
 ```javascript
 const { Client } = require('pg');
