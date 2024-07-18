@@ -82,7 +82,7 @@ module.exports = new Sequelize(
 )
 ```
 
-3. *Для создания БД использовался метод Code First описанныйц в файле `module.js`:*
+3. *Для создания БД использовался метод Code First описанный в файле `module.js`:*
 
 ```javascript
 const sequelize = require('../db')
