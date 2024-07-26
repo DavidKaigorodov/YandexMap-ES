@@ -34,9 +34,16 @@ async function insertDataFromFile(filePath) {
             const adress = data[0].replace(/"/g, '').trim();
             const latitude = parseFloat(data[1].replace(/"/g, ''));
             const longitude = parseFloat(data[2].replace(/"/g, ''));
+            const connectors_total = parseInt(data[3].replace(/"/g, ''));
+            const connector0_power = parseInt(data[4].replace(/"/g, ''));
+            const connector1_power = parseInt(data[5].replace(/"/g, ''));
+            const connector2_power = parseInt(data[6].replace(/"/g, ''));
+            const evse_type = data[7].replace(/"/g, '').trim();
+            
 
-            const insertQuery = `INSERT INTO stations (adress, latitude, longitude) VALUES ($1, $2, $3)`;
-            await client.query(insertQuery, [adress, latitude, longitude]);
+
+            const insertQuery = `INSERT INTO stations (adress, latitude, longitude, connectors_total, connector0_power, connector1_power, connector2_power, evse_type) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`;
+            await client.query(insertQuery, [adress, latitude, longitude, connectors_total, connector0_power, connector1_power, connector2_power, evse_type]);
 
             console.log(`Inserted Adress: ${adress}, Latitude: ${latitude}, Longitude: ${longitude} into stations`);
             lineNumber++;
