@@ -97,7 +97,13 @@ const Station = sequelize.define('station',{
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     adress: { type: DataTypes.STRING },
     latitude: { type: DataTypes.FLOAT },
-    longitude: { type: DataTypes.FLOAT }, 
+    longitude: { type: DataTypes.FLOAT },
+    connectors_total: {type: DataTypes.INTEGER },
+    connector0_power: { type: DataTypes.INTEGER },
+    connector1_power: { type: DataTypes.INTEGER },
+    connector2_power: { type: DataTypes.INTEGER },
+    evse_type: { type: DataTypes.BOOLEAN },
+
  }, {
         timestamps: false // Здесь указываем отключение автоматически создаваемых столбцов
       });
