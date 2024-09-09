@@ -23,6 +23,11 @@
 | adres    | Адрес электрозаправочной станции |
 | latitude | широта |
 | longitude | долгота |
+|connectors_total | кол-во портов |
+| connector0_power | номинальная мощность |
+| connector1_power | номинальная мощность |
+| connector2_power | номинальная мощность |
+| evse_type | тип ЭЗС (fast\slow) |
 
 *в prsones:*<br>
 | Название | Описание |
